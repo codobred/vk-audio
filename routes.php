@@ -2,6 +2,6 @@
 
 switch (Request::get('action')) {
     case 'search':
-        die('do search');
+        echo View::make(false, 'index');
         break;
 }
