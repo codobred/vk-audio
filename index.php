@@ -1,9 +1,8 @@
 <?php
 
 /**
- * require settings
+ * bootstrap the app
  */
-require_once __DIR__ . '/config/settings.php';
+require_once __DIR__ . '/bootstrap.php';
 
-
-echo "hello";
+var_dump(Request::get('action'));
