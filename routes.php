@@ -14,8 +14,11 @@ switch (Request::get('action')) {
             $settings['vk']['account'][1]
         );
 
+        $tracks = $vk->audioSearch($query, 0, 30);
+
         echo View::make('layout', 'search', array(
-            'query' => $query
+            'query' => $query,
+            'tracks' => $tracks,
         ));
 
         break;
