@@ -2,7 +2,13 @@
 
 switch (Request::get('action')) {
     case 'search':
-        die('make search');
+        $query = Request::get('query');
+
+        if (!$query) {
+            header('Location: /');die;
+        }
+
+        echo View::make('layout', 'search', array('query' => $query));
         break;
 
     default:
