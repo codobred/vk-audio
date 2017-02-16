@@ -1,15 +1,13 @@
-<!doctype html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.min.css">
-</head>
-<body>
-
-</body>
-</html>
+<div class="col-md-12">
+    <div class="well">
+        <form action="/" method="GET">
+            <div class="input-group">
+                <input type="hidden" name="action" value="search">
+                <input type="text" name="query" value="<?php echo isset($query) ? $query : '' ?>" class="form-control" placeholder="Введите запрос">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit">Искать!</button>
+                </span>
+            </div><!-- /input-group -->
+        </form>
+    </div><!-- /.col-lg-6 -->
+</div>
