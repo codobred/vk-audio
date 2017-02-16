@@ -43,7 +43,10 @@ class VkAction
         ), $params)), true);
 
         if (isset($data['error'])) {
+            header('HTTP/1.0 500 Vk error');
+            echo "<pre>";
             var_dump($data);
+            echo "</pre>";
             die;
         }
         
