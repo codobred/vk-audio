@@ -5,10 +5,19 @@ switch (Request::get('action')) {
         $query = Request::get('query');
 
         if (!$query) {
-            header('Location: /');die;
+            header('Location: /');
+            die;
         }
 
-        echo View::make('layout', 'search', array('query' => $query));
+        $vk = new VkAction(
+            $settings['vk']['account'][0],
+            $settings['vk']['account'][1]
+        );
+
+        echo View::make('layout', 'search', array(
+            'query' => $query
+        ));
+
         break;
 
     default:

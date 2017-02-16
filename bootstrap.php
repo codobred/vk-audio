@@ -1,9 +1,12 @@
 <?php
 
+if (!isset(__DIR__ . '/config/settings.php'))
+    die('Unable to include /config/settings.php');
+
 /**
  * require settings
  */
-require_once __DIR__ . '/config/settings.php';
+$settings = include __DIR__ . '/config/settings.php';
 
 /**
  * require Request class
